@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="kr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    
+    <style>
+      .svg-container {
+      border: 1px dashed #aaa;
+      background-color: aliceblue;
+      }
+      .h_row_title {padding:.3rem; margin-bottom:1rem;font-weight: bold; background-color:rgb(240, 239, 239);}
+      .card-text {font-size: .9em;}
+      .h_row_content2 {background-color:rgba(212, 205, 205, 0.097); margin-bottom: .75rem;}
+      .h_card  {padding:.75rem; }
+
+      .table td.fit, 
+      .table th.fit {
+          white-space: nowrap;
+          width: 1%;
+      }
+
+      </style>
+
+    <script>
+ var myModal;
+ var myModal2;
+ var myModal3;
+      function openDialog(){
+       
+       /*
+        a = $('#exampleModal');
+        alert(a);
+        $('#exampleModal').modal();
+        */
+        myModal = new bootstrap.Modal('#exampleModal', {
+                                                 keyboard: false
+        })
+        myModal.toggle();
+      }
+
+      function openDialog2(){
+       
+      
+        myModal2 = new bootstrap.Modal('#exampleModalToggle2', {
+                                                 keyboard: false
+        })
+        myModal.hide();
+        myModal2.toggle();
+
+      }      
+
+      function openMeshMap(){
+        window.open("./mesh_map.html");
+      }
+
+      function openResDetail(){
+
+        myModal3 = new bootstrap.Modal('#exampleModal_sub', {
+                                                 keyboard: false
+        })
+        myModal2.hide();
+        myModal3.toggle();
+
+      }
+
+
+    </script>
+
+
+  </head>
+
+  <body class="p-3 m-0">
+
+    <div class="container ">
+      <div class="row h_row_title">      
+        <i class="bi bi-grid-3x3-gap-fill"></i>&nbsp; [한도 배치] 작업 현황      
+      </div>
+      
+      <div class="row h_row_content2 pt-3">
+        <table class="table table-bordered text-center">
+          <thead>
+            <tr class="table-success">
+              <th scope="col">대기</th>
+              <th scope="col">진행중</th>
+              <th scope="col">오류</th>
+              <th scope="col">작업완료</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b><a href="javascript:openDialog();" class="link-info">36</a></b></td>
+              <td><b><a href="javascript:openDialog();" class="link-warning">2</a></b></td>
+              <td><b><a href="javascript:openDialog();" class="link-danger">0</a></b></td>
+              <td><b><a href="javascript:openDialog();" class="link-success">98</a></b></td>
+            </tr>
+          </tbody>
+        </table>
+        <p><i class="bi bi-bookmark"></i> 완료시간 : <b>04:15</b> (평균완료시간 : 4:30)</p>
+      </div> 
+
+    </div>
+   
+
+
+    <div class ="container svg-container mt-3">
+      <svg viewBox="0 0 1200 3000"  xmlns="http://www.w3.org/2000/svg">
+        <g>
+         <title>Layer 1</title>
+         <rect id="svg_1" height="96" width="175" y="49" x="46" stroke="#000" fill="#fff"/>
+         <rect id="svg_2" height="106" width="173" y="52" x="281" stroke="#000" fill="#fff"/>
+         <rect id="svg_3" height="105" width="128" y="55" x="592" stroke="#000" fill="#fff"/>
+         <rect id="svg_4" height="393" width="174" y="56" x="870" stroke="#000" fill="#fff"/>
+         <rect id="svg_5" height="159" width="185" y="213" x="568" stroke="#000" fill="#fff"/>
+         <rect id="svg_6" height="169" width="210" y="196" x="241" stroke="#000" fill="#fff"/>
+         <rect id="svg_7" height="185" width="125" y="194" x="67" stroke="#000" fill="#fff"/>
+         <ellipse ry="107.5" rx="104" id="svg_8" cy="560.5" cx="169" stroke="#000" fill="#aaa" style="cursor:pointer" onclick="javascript:openDialog();"/>
+         <path id="svg_9" d="m411.93501,518.43727l82.12328,0l25.37672,-80.59506l25.37674,80.59506l82.12326,0l-66.43901,49.80991l25.37804,80.59506l-66.43904,-49.81127l-66.43902,49.81127l25.37805,-80.59506l-66.43903,-49.80991z" stroke="#000" fill="#fff"/>
+         <rect id="svg_10" height="126" width="428" y="524" x="732" stroke="#000" fill="#fff"/>
+         <rect id="svg_11" height="232" width="256" y="775" x="86" stroke="#000" fill="#fff"/>
+         <rect id="svg_12" height="223" width="191" y="800" x="502" stroke="#000" fill="#fff"/>
+         <rect id="svg_13" height="152" width="86" y="781" x="748" stroke="#000" fill="#fff"/>
+         <rect id="svg_14" height="391" width="203" y="801" x="917" stroke="#000" fill="#fff"/>
+         <rect id="svg_15" height="265" width="420" y="1134" x="104" stroke="#000" fill="#fff"/>
+         <rect id="svg_16" height="329" width="232" y="1134" x="629" stroke="#000" fill="#fff"/>
+         <rect id="svg_17" height="377" width="345" y="1511" x="146" stroke="#000" fill="#fff"/>
+         <rect id="svg_18" height="280" width="192" y="1595" x="618" stroke="#000" fill="#fff"/>
+         <rect id="svg_19" height="218" width="163" y="1345" x="968" stroke="#000" fill="#fff"/>
+         <rect id="svg_20" height="66" width="252" y="1222" x="894" stroke="#000" fill="#fff"/>
+         <rect id="svg_21" height="121" width="208" y="1660" x="893" stroke="#000" fill="#fff"/>
+         <rect id="svg_22" height="132" width="290" y="1973" x="257" stroke="#000" fill="#fff"/>
+         <rect id="svg_23" height="129" width="178" y="1929" x="647" stroke="#000" fill="#fff"/>
+         <rect id="svg_24" height="218" width="185" y="1882" x="972" stroke="#000" fill="#fff"/>
+         <rect id="svg_25" height="306" width="247" y="2210" x="139" stroke="#000" fill="#fff"/>
+         <rect id="svg_26" height="311" width="200" y="2237" x="492" stroke="#000" fill="#fff"/>
+         <rect id="svg_27" height="170" width="127" y="2154" x="777" stroke="#000" fill="#fff"/>
+         <rect id="svg_28" height="238" width="207" y="2248" x="949" stroke="#000" fill="#fff"/>
+         <rect id="svg_29" height="193" width="187" y="2627" x="225" stroke="#000" fill="#fff"/>
+         <rect id="svg_30" height="255" width="199" y="2592" x="518" stroke="#000" fill="#fff"/>
+         <rect id="svg_31" height="270" width="175" y="2601" x="775" stroke="#000" fill="#fff"/>
+         <rect id="svg_32" height="168" width="135" y="2642" x="989" stroke="#000" fill="#fff"/>
+        </g>
+       </svg>   
+      </div>   
+
+
+
+      
+
+      <div class="modal fade" id="exampleModal"  data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-fullscreen-lg-down" >
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fw-bold fs-5" id="exampleModalLabel">
+                <i class="bi bi-grid-3x3-gap-fill"></i>&nbsp; [...] 작업 상세
+              </h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body table-responsive">
+ 
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">작업명</th>
+                    <th scope="col">상태</th>
+                    <th scope="col">시작</th>
+                    <th scope="col">종료</th>
+                    <th scope="col">평균시작</th>
+                    <th scope="col">평균종료</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td><a href="javascript:openDialog2();">Mark</a></td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td class="fit">Larry the Bird</td>
+                    <td>Thornton</td>
+                    <td>@twitter</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>Otto</td>
+                    <td>asdf</td>
+                  </tr>                  
+                </tbody>
+              </table>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- 기본정보 -->
+      <div class="modal fade" id="exampleModalToggle2"  aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-lg-down">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">
+                [ <b>JDPTDA0107_O01</b> ] 정보
+              </h1>
+              <button type="button" class="btn-close" data-bs-target="#exampleModal" data-bs-toggle="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+              <!-- 배치 작업 결과 -->
+              <div class="row h_row_title">
+                <i class="bi bi-grid-3x3-gap-fill"></i>&nbsp;&nbsp;
+                기본 정보
+              </div>  
+
+              <table class="table table-bordered fs-7" style="text-align: center;">
+                <tr>
+                  <td class="table-success align-middle" width="130"><b>배치명</b></td>
+                  <td ><input type="text" readonly class="form-control-plaintext" id="staticEmail" value="급부신청인파일전송"></td>
+                </tr>
+
+                <tr>
+                  <td class="table-success align-middle"><b>담당자</b></td>
+                  <td ><input type="text" readonly class="form-control-plaintext" id="staticEmail" value="박훈(O2000706)"></td>
+                </tr>
+                <tr>
+                  <td class="table-success align-middle" ><b>부담당자</b></td>
+                  <td ><input type="text" readonly class="form-control-plaintext" id="staticEmail" value="김동길(O7000561)"></td>
+                </tr>
+                <tr>
+                  <td class="table-success align-middle"><b>평균시작시간</b></td>
+                  <td><input type="text" readonly class="form-control-plaintext" id="staticEmail" value="3:15:06"></td>                                  
+                </tr>   
+                <tr>
+                  <td class="table-success align-middle"><b>평균종료시간</b></td>
+                  <td><input type="text" readonly class="form-control-plaintext" id="staticEmail" value="3:45:36"></td>                                  
+                </tr>  
+            </table>  
+            
+            <!-- 배치 작업 결과 -->
+            <div class="row h_row_title">
+              <i class="bi bi-grid-3x3-gap-fill"></i>&nbsp;&nbsp;
+              관련 업무
+            </div>            
+
+            <div class="row h_row_content2">
+
+              <div class="col-md-4 h_card">
+      
+                <div class="card text-start">
+                  <div class="card-body">
+      
+                    <h5 class="card-title" ><b>한도 생성</b> <span class="badge text-bg-success">리스크관리팀</span></h5>                    
+                    <hr/>
+                    <button type="button" class="btn btn-outline-primary btn-sm" onClick="javascript:openMeshMap();">확인하기</button>
+                  </div>
+                </div>
+              </div>
+      
+            </div>
+
+            <!-- 배치 작업 결과 -->
+            <div class="row h_row_title">
+              <i class="bi bi-grid-3x3-gap-fill"></i>&nbsp;&nbsp;
+              관련 Application
+            </div>            
+
+            <div class="row h_row_content2">
+              <div class="col-lg-3 h_card">
+    
+                <table class="table table-bordered text-center">
+                  <thead>
+                    <tr class="table-success">
+                      <th scope="col">업무</th>
+                      <th scope="col">건수</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><b>리스크관리</b></td>
+                      <td><b><a href="#" class="link-info">2</a></b></td>
+                    </tr>
+                    <tr>
+                      <td><b>종합수익</b></td>
+                      <td><b><a href="#" class="link-info">2</a></b></td>
+                    </tr>
+                  </tbody>
+                </table>
+    
+    
+              </div>
+    
+              <div class="col-lg-9 h_card table-responsive">
+                
+                <table class="table">
+                  <thead>
+                    <tr class="table-success">
+                      <th scope="col">#</th>
+                      <th scope="col">업무</th>
+                      <th scope="col">배치ID</th>
+                      <th scope="col">배치명</th>
+                      <th scope="col">담당자</th>
+                      <th scope="col">부담당자</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td class="fit">Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td class="fit">Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td class="fit">Larry the Bird</td>
+                      <td>Thornton</td>
+                      <td>@twitter</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                  </tbody>
+                </table>
+    
+    
+              </div>
+            </div>
+
+
+            <!-- 배치 작업 결과 -->
+            <div class="row h_row_title">
+              <i class="bi bi-grid-3x3-gap-fill"></i>&nbsp;&nbsp;
+              조치 이력
+            </div>     
+
+              <div class="h_card table-responsive">
+                
+                <table class="table">
+                  <thead>
+                    <tr class="table-success">
+                      <th scope="col">#</th>
+                      <th scope="col">발생일</th>
+                      <th scope="col" >구분</th>
+                      <th scope="col">운영자의견</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td class="fit">2023-06-01</td>
+                      <td class="fit"><a href="javascript:openResDetail();">배치오류</a></td>
+                      <td>
+                        <pre>asdflj
+asdlfkj
+asdlfkjasdfj
+
+asdf;lkdsfsafdlskafjdslakjf
+asdlkfj
+                        </pre>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>2023-06-01</td>
+                      <td class="fit"><a href="javascript:openResDetail();">실행시간확인</a></td>
+                      <td>@fat</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>2023-06-01</td>
+                      <td class="fit"><a href="javascript:openResDetail();">미사용배치</a></td>
+                      <td>@twitter</td>
+                    </tr>
+                  </tbody>
+                </table>
+    
+    
+              </div>
+
+
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" data-bs-target="#exampleModal" data-bs-toggle="modal">닫기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!--대응이력-->
+      <div class="modal fade" id="exampleModal_sub"  data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-fullscreen-lg-down" >
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fw-bold fs-5" id="exampleModalLabel">
+                JDPTDA0107_O01
+                <span class="badge text-bg-danger">배치 오류</span>
+              </h1>
+              <button type="button" class="btn-close"  data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+              <form>
+
+                <table class="table table-bordered" style="text-align: center;">
+                    <tr>
+                      <td class="table-success align-middle" width="100"><b>배치명</b></td>
+                      <td ><input type="text" readonly class="form-control-plaintext" id="staticEmail" value="급부신청인파일전송"></td>
+                    </tr>
+
+                    <tr>
+                      <td class="table-success align-middle"><b>담당자</b></td>
+                      <td ><input type="text" readonly class="form-control-plaintext" id="staticEmail" value="박훈(O2000706)"></td>
+                    </tr>
+                    <tr>
+                      <td class="table-success align-middle"><b>시작시간</b></td>
+                      <td><input type="text" readonly class="form-control-plaintext" id="staticEmail" value="2023-06-24 3:15:06"></td>                      
+                    </tr>   
+                    <tr>
+                      <td class="table-success align-middle"><b>종료시간</b></td>
+                      <td><input type="text" readonly class="form-control-plaintext" id="staticEmail" value="2023-06-24 3:45:36"></td>                      
+                    </tr>                                       
+                    <tr>
+                      <td class="table-success align-middle"><b>세부사항</b></td>
+                      <td >
+                        <textarea class="form-control form-control-plaintext" id="message-text" rows="10" readonly>
+2012-02-13 12:34:08 (096) glide.quota.manager SYSTEM URL= /incident_list.do?
+sysparm_userpref_module=b55fbec4c0a800090088e83d7ff500de&active=true&sysparm_query=active=true^EQ, 
+THREAD= http-bio-8080-exec-3, FG= true, TYPE= 1, STATE= 2, USER= null, TIME= 8,807, MEM= 0, ATTRIBUTES= {}
+2012-02-13 13:25:31 (900) glide.quota.manager SYSTEM QuotaFinder: Assigning quota
+"TEST PROBLEM FORM" with filter: type=form^urlLIKEsys_id=46fb9e31a9fe198101492060c2a4f8cb^EQ to
+transaction: URL= /problem.do?sys_id=46fb9e31a9fe198101492060c2a4f8cb, THREAD= http-bio-8080-exec-1,
+FG= true, TYPE= 1, STATE= 4, USER= null, TIME= 1,121, MEM= 0, ATTRIBUTES= {}
+2012-02-13 13:25:33 (930) glide.quota.manager SYSTEM WARNING *** WARNING ***
+Transaction: Cancelling transaction /problem.do (maximum execution time exceeded):
+Thread http-bio-8080-exec-1
+                        </textarea>
+                      </td>
+                    </tr> 
+                </table>
+
+                <div class="row h_row_title mb-3">
+                  <i class="bi bi-grid-3x3-gap-fill"></i>&nbsp;&nbsp;
+                  의견 등록 하기
+                </div>                
+                <div>
+                  <textarea class="form-control" id="message-text" rows="10"></textarea>
+                </div>
+
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success">영향없음</button>
+              <button type="button" class="btn btn-primary px-5">반영</button>
+              <button class="btn btn-secondary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">닫기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+  </body>
+</html>
